@@ -5,5 +5,7 @@
 --macro Stub.modules()
 
 -lib react
+-lib mmvc
 -cp src/haxe/lib
 -cp src/haxe/main
+-cp lib

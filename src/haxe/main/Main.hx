@@ -1,29 +1,27 @@
-import api.react.ReactDOM;
-import api.react.ReactComponent;
-import api.react.ReactMacro.jsx;
+package ;
+
 import js.Browser;
-import view.App;
+import react.React;
+import react.ReactComponent;
+import react.ReactDOM;
+import view.Root;
 
 class Main
 {
 	static function main() 
 	{
-		trace('main()!');
-
-		render();
-		Webpack.hotReload('./view', render);
+		renderDOM();
+		Webpack.hotReload('./view', renderDOM);
 	}
-	
-	static function render()
+
+	static function renderDOM()
 	{
+		var container = Browser.document.getElementById('root');
 		Webpack.ensure(['./view'], function() {
-			ReactDOM.render(
-				jsx('<AppContainer><App/></AppContainer>'), 
-				Browser.document.getElementById('root'));
+			ReactDOM.render(React.createElement(AppContainer, {}, Root.create()), container);
 		});
 	}
 }
 
 @:jsRequire('react-hot-loader', 'AppContainer')
 extern class AppContainer extends ReactComponent { }
-

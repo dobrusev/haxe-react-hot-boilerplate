@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Boilerplate for ReactJS project with hot code reloading",
   "scripts": {
-    "haxify": "haxe-watchify --program haxe --src src/haxe/main/view --hxml build-view.hxml --compiler server",
+    "haxify": "haxe-watchify --program haxe --src src/haxe/main/view --hxml build-view.hxml --compiler server --port 6003",
     "start": "node server.js"
   },
   "repository": {

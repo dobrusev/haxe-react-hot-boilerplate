@@ -1,11 +1,16 @@
 package view;
 
-import api.react.ReactComponent;
-import api.react.ReactMacro.jsx;
+import react.React;
 import haxe.Timer;
+import react.ReactComponent;
 
 class Counter extends ReactComponent
 {
+	public static function create():ReactElement
+	{
+		return React.createElement(Counter);
+	}
+
 	var interval:Timer;
 	
 	public function new(props)
@@ -39,13 +44,11 @@ class Counter extends ReactComponent
 			background:'yellow',
 			padding:'10px'
 		};
-		return jsx('
-			<h2 style=$styles>
-				Counter: ${state.counter}
-				<hr/>
-				<Button onClick=$click>That button!</Button>
-			</h2>
-		');
+
+		return React.createElement("h2", {style:styles}, 'Counter: ${state.counter}',
+			React.createElement("hr"),
+			Button.create(click)
+		);
 	}
 	
 	function click() 
