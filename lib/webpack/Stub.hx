@@ -1,4 +1,4 @@
-package;
+package webpack;
 
 #if macro
 import haxe.io.Path;

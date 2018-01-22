@@ -1,3 +1,5 @@
+package webpack;
+
 import haxe.macro.Expr;
 
 class Webpack

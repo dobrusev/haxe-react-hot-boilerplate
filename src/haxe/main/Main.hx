@@ -5,6 +5,7 @@ import react.React;
 import react.ReactComponent;
 import react.ReactDOM;
 import view.Root;
+import webpack.Webpack;
 
 class Main
 {

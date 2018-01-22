@@ -2,7 +2,7 @@
 -D source-map-content
 -D react-hot
 -dce full
---macro Stub.modules()
+--macro webpack.Stub.modules()
 
 -lib react
 -lib mmvc

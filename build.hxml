@@ -3,10 +3,10 @@
 build-common.hxml
 
 --macro exclude('view')
--js src/js/main.js
+-js bin/js/main.js
 -main Main
 
--cmd touch src/js/main.js
+-cmd touch bin/js/main.js
 
 --next
 
